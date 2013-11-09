@@ -32,14 +32,14 @@
 </head>
 <body>
 
-  <div id="stops" class="container">
-    <div data-bind="LocationList" class="dropdown">
+  <div class="container">
+    <div class="dropdown">
       <button class="btn dropdown-toggle" type="button" id="stopsDropdown" data-toggle="dropdown">
         Stops
         <span class="caret"></span>
       </button>
 
-      <ul data-bind="StopLocation" class="dropdown-menu" role="menu">
+      <ul class="dropdown-menu" role="menu" id="stops">
         <li role="presentation"><a role="menuitem" href="#" data-bind="name"></a></li>
       </ul>
     </div>

@@ -32,18 +32,19 @@ navigator.geolocation.getCurrentPosition(function (position) {
       "format": "json",
       "originCoordLat": position.coords.latitude,
       "originCoordLong": position.coords.longitude,
-      "maxNo": 10
+      "maxNo": 30
     },
     dataType: "jsonp"
   }).done(function (data) {
     var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
-    Transparency.render(document.getElementById("stops"), data);
+    Transparency.render(document.getElementById("stops"), filteredStops);
     $.ajax({
       url: base + "departureBoard?jsonpCallback=?",
       data: {
         "authKey": apikey,
         "format": "json",
-        "id": filteredStops[0].id
+        "id": filteredStops[0].id,
+        "timespan": 60
       },
       dataType: "jsonp",
       cache: false
