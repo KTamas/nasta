@@ -45,6 +45,12 @@ var gotLocation = function (pos) {
   }).done(function (data) {
     var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
     Transparency.render(document.getElementById("stops"), filteredStops);
+    $(".dropdown-menu li a").click(function () {
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+    });
+
+    $(".btn").text(filteredStops[0].name);
     $.ajax({
       url: baseurl + "departureBoard?jsonpCallback=?",
       data: {
@@ -69,10 +75,6 @@ var gotError = function (error) {
   window.alert("Got error: " + error.code + " - " + error.message);
 };
 
-$(".dropdown-menu li a").click(function () {
-  $(".btn:first-child").text($(this).text());
-  $(".btn:first-child").val($(this).text());
-});
 
 $(document).ready(function () {
   navigator.geolocation.getCurrentPosition(gotLocation, gotError);
