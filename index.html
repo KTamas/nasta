@@ -34,16 +34,17 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
-	<div id="departure">
+	<div id="departure" class="container">
 	  <div data-bind="DepartureBoard">
-	    <div data-bind="Departure" class="departure">
-	      <span data-bind="sname"></span>
-	      <span data-bind="direction"></span>
-	      <span data-bind="diff"></span>
+	    <div data-bind="Departure" class="row">
+	      <div data-bind="sname" class="col-xs-2"></div>
+	      <div data-bind="direction" class="col-xs-8"></div>
+	      <div data-bind="diff" class="col-xs-2"></div>
 	      <br />
 	    </div>
 	  </div>
@@ -51,6 +52,7 @@
 
         <script src="js/vendor/jquery-2.0.3.min.js"></script>
         <script src="js/vendor/transparency.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
 
