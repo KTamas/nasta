@@ -4,12 +4,14 @@
 "use strict";
 
 var apikey = "1b71620f-a0f1-4448-afe9-069e40b1ef51";
-var base = "http://api.vasttrafik.se/bin/rest.exe/v1/";
+var baseurl = "http://api.vasttrafik.se/bin/rest.exe/v1/";
 
 var gDate = function (dd, tt) {
   var d = dd.split('-'), t = tt.split(':');
   return new Date(d[0], d[1], d[2], t[0], t[1]);
 };
+
+var base;
 
 var timedecorator = function (params) {
   var to_return = (gDate(this.rtDate, this.rtTime) - base) / 1000 / 60;
@@ -24,22 +26,24 @@ var directives = {
   }
 };
 
-navigator.geolocation.getCurrentPosition(function (position) {
+
+var gotLocation = function (pos) {
   $.ajax({
-    url: base + "location.nearbystops?jsonpCallback=?",
+    url: baseurl + "location.nearbystops?jsonpCallback=?",
     data: {
       "authKey": apikey,
       "format": "json",
-      "originCoordLat": position.coords.latitude,
-      "originCoordLong": position.coords.longitude,
+      "originCoordLat": pos.coords.latitude,
+      "originCoordLong": pos.coords.longitude,
       "maxNo": 30
     },
-    dataType: "jsonp"
+    dataType: "jsonp",
+    cache: false
   }).done(function (data) {
     var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
     Transparency.render(document.getElementById("stops"), filteredStops);
     $.ajax({
-      url: base + "departureBoard?jsonpCallback=?",
+      url: baseurl + "departureBoard?jsonpCallback=?",
       data: {
         "authKey": apikey,
         "format": "json",
@@ -56,4 +60,18 @@ navigator.geolocation.getCurrentPosition(function (position) {
       Transparency.render(document.getElementById("departure"), data, directives);
     });
   });
+};
+
+var gotError = function (error) {
+  window.alert("Got error: " + error.code + " - " + error.message);
+};
+
+$(".dropdown-menu li a").click(function () {
+  $(".btn:first-child").text($(this).text());
+  $(".btn:first-child").val($(this).text());
 });
+
+$(document).ready(function () {
+  navigator.geolocation.getCurrentPosition(gotLocation, gotError);
+});
+
