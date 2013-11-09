@@ -1,0 +1,174 @@
+{
+"LocationList":{
+  "noNamespaceSchemaLocation":"http://api.vasttrafik.se/v1/hafasRestLocation.xsd",
+  "servertime":"15:22",
+  "serverdate":"2013-11-09",
+  "StopLocation":[{
+    "name":"Amalia Jönssons Gata, Göteborg",
+    "id":"9022014002510002",
+    "lat":"57.655103",
+    "lon":"11.939409",
+    "track":"B"
+    },{
+    "name":"Sändaregatan, Göteborg",
+    "id":"9022014006560001",
+    "lat":"57.653153",
+    "lon":"11.931984",
+    "track":"A"
+    },{
+    "name":"Sändaregatan, Göteborg",
+    "id":"9021014006560000",
+    "lat":"57.653090",
+    "lon":"11.931912"
+    },{
+    "name":"Sändaregatan, Göteborg",
+    "id":"9022014006560002",
+    "lat":"57.653036",
+    "lon":"11.931831",
+    "track":"B"
+    },{
+    "name":"Amalia Jönssons Gata, Göteborg",
+    "id":"9021014002510000",
+    "lat":"57.655373",
+    "lon":"11.939643"
+    },{
+    "name":"F O Peterssons Gata, Göteborg",
+    "id":"9022014002550001",
+    "lat":"57.651175",
+    "lon":"11.939553",
+    "track":"A"
+    },{
+    "name":"F O Peterssons Gata, Göteborg",
+    "id":"9021014002550000",
+    "lat":"57.651130",
+    "lon":"11.939526"
+    },{
+    "name":"F O Peterssons Gata, Göteborg",
+    "id":"9022014002550002",
+    "lat":"57.651094",
+    "lon":"11.939517",
+    "track":"B"
+    },{
+    "name":"Amalia Jönssons Gata, Göteborg",
+    "id":"9022014002510001",
+    "lat":"57.655652",
+    "lon":"11.939904",
+    "track":"A"
+    },{
+    "name":"Radiotorget, Göteborg",
+    "id":"9022014005410002",
+    "lat":"57.657261",
+    "lon":"11.933009",
+    "track":"B"
+    },{
+    "name":"Radiotorget, Göteborg",
+    "id":"9021014005410000",
+    "lat":"57.657306",
+    "lon":"11.933090"
+    },{
+    "name":"Radiotorget, Göteborg",
+    "id":"9022014005410001",
+    "lat":"57.657360",
+    "lon":"11.933162",
+    "track":"A"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421005",
+    "lat":"57.648937",
+    "lon":"11.934780",
+    "track":"E"
+    },{
+    "name":"Radiovägen, Göteborg",
+    "id":"9022014005420004",
+    "lat":"57.650276",
+    "lon":"11.930267",
+    "track":"D"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421004",
+    "lat":"57.648784",
+    "lon":"11.935031",
+    "track":"D"
+    },{
+    "name":"Radiovägen, Göteborg",
+    "id":"9022014005420003",
+    "lat":"57.650051",
+    "lon":"11.930402",
+    "track":"C"
+    },{
+    "name":"Lona Knapes Gata, Göteborg",
+    "id":"9022014004535002",
+    "lat":"57.649485",
+    "lon":"11.941710",
+    "track":"B"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421001",
+    "lat":"57.648946",
+    "lon":"11.933377",
+    "track":"A"
+    },{
+    "name":"Lona Knapes Gata, Göteborg",
+    "id":"9021014004535000",
+    "lat":"57.649593",
+    "lon":"11.942070"
+    },{
+    "name":"Lona Knapes Gata, Göteborg",
+    "id":"9022014004535001",
+    "lat":"57.649701",
+    "lon":"11.942448",
+    "track":"A"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9021014005421000",
+    "lat":"57.648703",
+    "lon":"11.934070"
+    },{
+    "name":"Beatrice Lesslies Gata, Göteborg",
+    "id":"9022014002500002",
+    "lat":"57.657980",
+    "lon":"11.939670",
+    "track":"B"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421003",
+    "lat":"57.648514",
+    "lon":"11.933791",
+    "track":"C"
+    },{
+    "name":"Radiovägen, Göteborg",
+    "id":"9021014005420000",
+    "lat":"57.649935",
+    "lon":"11.929611"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421006",
+    "lat":"57.648343",
+    "lon":"11.934061",
+    "track":"F"
+    },{
+    "name":"Radiomotet, Göteborg",
+    "id":"9022014005421002",
+    "lat":"57.648478",
+    "lon":"11.933270",
+    "track":"B"
+    },{
+    "name":"Beatrice Lesslies Gata, Göteborg",
+    "id":"9021014002500000",
+    "lat":"57.658250",
+    "lon":"11.939679"
+    },{
+    "name":"Frölunda Smedja, Göteborg",
+    "id":"9022014002525002",
+    "lat":"57.648092",
+    "lon":"11.939193",
+    "track":"B"
+    },{
+    "name":"Radiovägen, Göteborg",
+    "id":"9022014005420001",
+    "lat":"57.649800",
+    "lon":"11.928892",
+    "track":"A"
+    }]
+  }
+}
