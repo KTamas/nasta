@@ -29,6 +29,25 @@ var directives = {
   }
 };
 
+var getStop = function (stopid) {
+  $.ajax({
+    url: baseurl + "departureBoard?jsonpCallback=?",
+    data: {
+      "authKey": apikey,
+      "format": "json",
+      "id": stopid,
+      "timespan": 60
+    },
+    dataType: "jsonp",
+    cache: false
+  }).done(function (data) {
+    var t, d;
+    t = data.DepartureBoard.servertime;
+    d = data.DepartureBoard.serverdate;
+    window.base = gDate(d, t);
+    Transparency.render(document.getElementById("departure"), data, directives);
+  });
+};
 
 var gotLocation = function (pos) {
   $.ajax({
@@ -51,23 +70,7 @@ var gotLocation = function (pos) {
     });
 
     $(".btn").text(filteredStops[0].name);
-    $.ajax({
-      url: baseurl + "departureBoard?jsonpCallback=?",
-      data: {
-        "authKey": apikey,
-        "format": "json",
-        "id": filteredStops[0].id,
-        "timespan": 60
-      },
-      dataType: "jsonp",
-      cache: false
-    }).done(function (data) {
-      var t, d;
-      t = data.DepartureBoard.servertime;
-      d = data.DepartureBoard.serverdate;
-      window.base = gDate(d, t);
-      Transparency.render(document.getElementById("departure"), data, directives);
-    });
+    getStop(filteredStops[0].id);
   });
 };
 
