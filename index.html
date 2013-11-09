@@ -1,70 +1,76 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="cleartype" content="on">
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+  <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
 
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#222222">
-
-
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Nästa">
-	<meta name="viewport" content="width=device-width, user-scalable=no" />
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#222222">
 
 
-        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
-        <!--
-        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-        -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Nästa">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
 
-	<div id="departure" class="container">
-	  <div data-bind="DepartureBoard">
-	    <div data-bind="Departure" class="row">
-	      <div data-bind="sname" class="col-xs-2"></div>
-	      <div data-bind="direction" class="col-xs-8"></div>
-	      <div data-bind="diff" class="col-xs-2"></div>
-	      <br />
-	    </div>
-	  </div>
-	</div>
+  <div id="stops" class="container">
+    <div data-bind="LocationList" class="dropdown">
+      <button class="btn dropdown-toggle" type="button" id="stopsDropdown" data-toggle="dropdown">
+        Stops
+        <span class="caret"></span>
+      </button>
 
-        <script src="js/vendor/jquery-2.0.3.min.js"></script>
-        <script src="js/vendor/transparency.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/helper.js"></script>
-        <script src="js/main.js"></script>
+      <ul data-bind="StopLocation" class="dropdown-menu" role="menu">
+        <li role="presentation"><a role="menuitem" href="#" data-bind="name"></a></li>
+      </ul>
+    </div>
+  </div>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <div id="departure" class="container">
+    <div data-bind="DepartureBoard">
+      <div data-bind="Departure" class="row">
+        <div data-bind="sname" class="col-xs-2 text-center"></div>
+        <div data-bind="direction" class="col-xs-8 text-left"></div>
+        <div data-bind="diff" class="col-xs-2 text-right"></div>
+        <br />
+      </div>
+    </div>
+  </div>
 
-	  ga('create', 'UA-45591133-1', 'ktamas.com');
-	  ga('send', 'pageview');
+  <script src="js/vendor/jquery-2.0.3.min.js"></script>
+  <script src="js/vendor/transparency.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/main.js"></script>
 
-	</script>
-    </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45591133-1', 'ktamas.com');
+  ga('send', 'pageview');
+
+  </script>
+</body>
 </html>
