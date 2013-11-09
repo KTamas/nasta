@@ -21,12 +21,11 @@
         <meta name="msapplication-TileColor" content="#222222">
 
 
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-        <!--
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
-        -->
+        <meta name="apple-mobile-web-app-title" content="Nästa">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+
 
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <!--
@@ -39,17 +38,31 @@
     </head>
     <body>
 
-        <!-- Add your site or application content here -->
+	<div id="departure">
+	  <div data-bind="DepartureBoard">
+	    <div data-bind="Departure" class="departure">
+	      <span data-bind="sname"></span>
+	      <span data-bind="direction"></span>
+	      <span data-bind="diff"></span>
+	      <br />
+	    </div>
+	  </div>
+	</div>
 
-        <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/vendor/jquery-2.0.3.min.js"></script>
+        <script src="js/vendor/transparency.min.js"></script>
         <script src="js/helper.js"></script>
+        <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-            s.parentNode.insertBefore(g,s)}(document,"script"));
-        </script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45591133-1', 'ktamas.com');
+	  ga('send', 'pageview');
+
+	</script>
     </body>
 </html>
