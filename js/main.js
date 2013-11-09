@@ -14,14 +14,15 @@ var gDate = function (dd, tt) {
 var base;
 
 var timedecorator = function (params) {
-  var date = this.rtDate === undefined ? this.date : this.rtDate;
-  var time = this.rtTime === undefined ? this.time : this.rtTime;
-  var dt = gDate(date, time);
-  var to_return = (dt - base) / 1000 / 60;
+  var date, time, dt, to_return;
+  date = this.rtDate === undefined ? this.date : this.rtDate;
+  time = this.rtTime === undefined ? this.time : this.rtTime;
+  dt = gDate(date, time);
+  to_return = (dt - base) / 1000 / 60;
   return to_return === 0 ? "Nu" : to_return;
 };
 
-var directives = {
+var boardDirectives = {
   DepartureBoard : {
     Departure : {
       diff : { text: timedecorator }
@@ -44,9 +45,17 @@ var getStop = function (stopid) {
     var t, d;
     t = data.DepartureBoard.servertime;
     d = data.DepartureBoard.serverdate;
-    window.base = gDate(d, t);
-    Transparency.render(document.getElementById("departure"), data, directives);
+    base = gDate(d, t);
+    Transparency.render(document.getElementById("departure"), data, boardDirectives);
   });
+};
+
+var stopDirectives = {
+  name : {
+    "data-stopid" : function (params) {
+      return this.id;
+    }
+  }
 };
 
 var gotLocation = function (pos) {
@@ -57,19 +66,22 @@ var gotLocation = function (pos) {
       "format": "json",
       "originCoordLat": pos.coords.latitude,
       "originCoordLong": pos.coords.longitude,
-      "maxNo": 30
+      "maxNo": 50
     },
     dataType: "jsonp",
     cache: false
   }).done(function (data) {
     var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
-    Transparency.render(document.getElementById("stops"), filteredStops);
+    Transparency.render(document.getElementById("stops"), filteredStops, stopDirectives);
     $(".dropdown-menu li a").click(function () {
-      $(".btn:first-child").text($(this).text());
-      $(".btn:first-child").val($(this).text());
+      $(".btn").text($(this).text());
+      $(".btn").data("stopid", $(this).data("stopid"));
+      getStop($(this).data("stopid"));
     });
 
     $(".btn").text(filteredStops[0].name);
+    $(".btn").data("stopid", filteredStops[0].id);
+
     getStop(filteredStops[0].id);
   });
 };
