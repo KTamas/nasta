@@ -14,7 +14,10 @@ var gDate = function (dd, tt) {
 var base;
 
 var timedecorator = function (params) {
-  var to_return = (gDate(this.rtDate, this.rtTime) - base) / 1000 / 60;
+  var date = this.rtDate === undefined ? this.date : this.rtDate;
+  var time = this.rtTime === undefined ? this.time : this.rtTime;
+  var dt = gDate(date, time);
+  var to_return = (dt - base) / 1000 / 60;
   return to_return === 0 ? "Nu" : to_return;
 };
 
