@@ -13,30 +13,13 @@ var gDate = function (dd, tt) {
 
 var base;
 
-var timedecorator = function (params) {
-  var date, time, dt, to_return;
-  date = this.rtDate === undefined ? this.date : this.rtDate;
-  time = this.rtTime === undefined ? this.time : this.rtTime;
-  dt = gDate(date, time);
-  to_return = (dt - base) / 1000 / 60;
-  return to_return === 0 ? "Nu" : to_return;
-};
-
 var calctime = function (p) {
   var date, time, dt, to_return;
   date = p.rtDate === undefined ? p.date : p.rtDate;
   time = p.rtTime === undefined ? p.time : p.rtTime;
   dt = gDate(date, time);
   to_return = (dt - base) / 1000 / 60;
-  return to_return === 0 ? "Nu" : to_return;
-};
-
-var boardDirectives = {
-  DepartureBoard : {
-    Departure : {
-      diff : { text: timedecorator }
-    }
-  }
+  return to_return;
 };
 
 var getStop = function (stopid) {
@@ -52,22 +35,45 @@ var getStop = function (stopid) {
     dataType: "jsonp",
     cache: false
   }).done(function (data) {
-    var t, d, sortedData;
+    var t, d, sortedData, lines, groupedLines;
     t = data.DepartureBoard.servertime;
     d = data.DepartureBoard.serverdate;
     base = gDate(d, t);
+    lines = {};
     sortedData = data.DepartureBoard.Departure.map(function (e) {
       e.timeleft = calctime(e);
       return e;
     }).sort(function (a, b) {
-      if (a.timeleft < b.timeleft)
+      if (parseFloat(a.sname) < parseFloat(b.sname))
         return -1;
-      if (a.timeleft > b.timeleft)
+      if (parseFloat(a.sname) > parseFloat(b.sname))
         return 1;
-      if (a.timeleft === b.timeleft)
-        return 0;
+      if (a.sname === b.sname) {
+        if (a.track < b.track)
+          return -1;
+        if (a.track > b.track)
+          return 1;
+        if (a.track === b.track) {
+          if (parseFloat(a.timeleft) < parseFloat(b.timeleft))
+            return -1;
+          if (parseFloat(a.timeleft) > parseFloat(b.timeleft))
+            return 1;
+          if (a.timeleft === b.timeleft)
+            return 0;
+        }   
+      }
     });
-    Transparency.render(document.getElementById("departure"), sortedData);
+
+    sortedData.forEach(function (e, i, a) {
+      if (i % 2 === 0) {
+        e.darefter = a[i+1].timeleft;
+      }
+    });
+    var finalData = sortedData.filter(function (e) {
+      return e.darefter !== undefined;
+    });
+    
+    Transparency.render(document.getElementById("departure"), finalData);
   });
 };
 
