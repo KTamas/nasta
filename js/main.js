@@ -22,6 +22,15 @@ var timedecorator = function (params) {
   return to_return === 0 ? "Nu" : to_return;
 };
 
+var calctime = function (p) {
+  var date, time, dt, to_return;
+  date = p.rtDate === undefined ? p.date : p.rtDate;
+  time = p.rtTime === undefined ? p.time : p.rtTime;
+  dt = gDate(date, time);
+  to_return = (dt - base) / 1000 / 60;
+  return to_return === 0 ? "Nu" : to_return;
+};
+
 var boardDirectives = {
   DepartureBoard : {
     Departure : {
@@ -37,16 +46,28 @@ var getStop = function (stopid) {
       "authKey": apikey,
       "format": "json",
       "id": stopid,
-      "timespan": 60
+      "timeSpan": 120,
+      "maxDeparturesPerLine": 2
     },
     dataType: "jsonp",
     cache: false
   }).done(function (data) {
-    var t, d;
+    var t, d, sortedData;
     t = data.DepartureBoard.servertime;
     d = data.DepartureBoard.serverdate;
     base = gDate(d, t);
-    Transparency.render(document.getElementById("departure"), data, boardDirectives);
+    sortedData = data.DepartureBoard.Departure.map(function (e) {
+      e.timeleft = calctime(e);
+      return e;
+    }).sort(function (a, b) {
+      if (a.timeleft < b.timeleft)
+        return -1;
+      if (a.timeleft > b.timeleft)
+        return 1;
+      if (a.timeleft === b.timeleft)
+        return 0;
+    });
+    Transparency.render(document.getElementById("departure"), sortedData);
   });
 };
 
@@ -94,4 +115,3 @@ var gotError = function (error) {
 $(document).ready(function () {
   navigator.geolocation.getCurrentPosition(gotLocation, gotError);
 });
-
