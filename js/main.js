@@ -22,6 +22,19 @@ var calctime = function (p) {
   return to_return;
 };
 
+var boardDirectives = {
+  sname: {
+    style: function (params) {
+      return "background-color: "+ this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: 24px;";
+    }
+  },
+  direction: {
+    html: function () {
+      return this.direction.replace("via", "<br /><small>via") + "</small>";
+    }
+  }
+};
+
 var getStop = function (stopid) {
   $.ajax({
     url: baseurl + "departureBoard?jsonpCallback=?",
@@ -73,7 +86,7 @@ var getStop = function (stopid) {
       return e.darefter !== undefined;
     });
     
-    Transparency.render(document.getElementById("departure"), finalData);
+    Transparency.render(document.getElementById("departure"), finalData, boardDirectives);
   });
 };
 

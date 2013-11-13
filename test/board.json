@@ -1,0 +1,396 @@
+
+processJSON({
+"DepartureBoard":{
+  "noNamespaceSchemaLocation":"http://api.vasttrafik.se/v1/hafasRestDepartureBoard.xsd",
+  "servertime":"16:48",
+  "serverdate":"2013-11-10",
+  "Departure":[{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"16:48",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400087",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"16:48",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=874872%2F300247%2F753448%2F85125%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"16:52",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300091",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"16:56",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=859962%2F287276%2F244670%2F164327%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"16:53",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700093",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"16:55",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=937587%2F326588%2F222582%2F201238%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Buss 58",
+    "sname":"58",
+    "type":"BUS",
+    "stopid":"9022014004090003",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"16:56",
+    "date":"2013-11-10",
+    "journeyid":"9015014505800648",
+    "direction":"Bergsjön",
+    "track":"C",
+    "rtTime":"16:59",
+    "rtDate":"2013-11-10",
+    "fgColor":"#00A5DC",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=874995%2F306036%2F664262%2F40468%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090003%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:00",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400089",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"17:00",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=219543%2F81804%2F59294%2F43560%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:04",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300093",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"17:06",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=168240%2F56698%2F459774%2F173810%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:05",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700095",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"17:08",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=920700%2F320955%2F570270%2F21767%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:12",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400091",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"17:12",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=395526%2F140465%2F520662%2F128516%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:16",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300095",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"17:16",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=716829%2F239563%2F850104%2F186112%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:17",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700097",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"17:17",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=57351%2F33170%2F631930%2F296851%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:24",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400093",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"17:24",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=426750%2F150873%2F791330%2F253443%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Buss 58",
+    "sname":"58",
+    "type":"BUS",
+    "stopid":"9022014004090003",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:26",
+    "date":"2013-11-10",
+    "journeyid":"9015014505800650",
+    "direction":"Bergsjön",
+    "track":"C",
+    "rtTime":"17:26",
+    "rtDate":"2013-11-10",
+    "fgColor":"#00A5DC",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "accessibility":"wheelChair",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=460284%2F167799%2F33684%2F136589%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090003%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:28",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300097",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"17:28",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=817722%2F273196%2F317622%2F113772%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:29",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700099",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"17:29",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=986151%2F342776%2F935172%2F138870%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:36",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400095",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"17:36",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=658422%2F228097%2F985240%2F273175%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:40",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300099",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"17:40",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=412815%2F138756%2F692958%2F208877%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:41",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700101",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"17:41",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=643341%2F228504%2F544718%2F57913%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 4",
+    "sname":"4",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:48",
+    "date":"2013-11-10",
+    "journeyid":"9015014500400097",
+    "direction":"Angered",
+    "track":"A",
+    "rtTime":"17:48",
+    "rtDate":"2013-11-10",
+    "fgColor":"#14823c",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=437052%2F154307%2F391548%2F50120%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 3",
+    "sname":"3",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:52",
+    "date":"2013-11-10",
+    "journeyid":"9015014500300101",
+    "direction":"Kålltorp",
+    "track":"A",
+    "rtTime":"17:52",
+    "rtDate":"2013-11-10",
+    "fgColor":"#004b85",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=145155%2F49009%2F903220%2F403228%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    },{
+    "name":"Spårvagn 7",
+    "sname":"7",
+    "type":"TRAM",
+    "stopid":"9022014004090001",
+    "stop":"Kungsportsplatsen, Göteborg",
+    "time":"17:53",
+    "date":"2013-11-10",
+    "journeyid":"9015014500700103",
+    "direction":"Bergsjön",
+    "track":"A",
+    "rtTime":"17:53",
+    "rtDate":"2013-11-10",
+    "fgColor":"#7d4313",
+    "bgColor":"#ffffff",
+    "stroke":"Solid",
+    "JourneyDetailRef":{
+      "ref":"http://api.vasttrafik.se/bin/rest.exe/v1/journeyDetail?ref=613983%2F218716%2F247122%2F81103%2F80%3Fdate%3D2013-11-10%26station_evaId%3D4090001%26station_type%3Ddep%26authKey%3Dtestnyckel%26format%3Djson%26jsonpCallback%3DprocessJSON%26"
+      }
+    }]
+  }
+});

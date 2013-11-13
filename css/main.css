@@ -214,3 +214,7 @@ textarea[contenteditable] {
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
 }
+
+small {
+    font-size: 12px !important;
+}
