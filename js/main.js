@@ -25,7 +25,7 @@ var calctime = function (p) {
 var boardDirectives = {
   sname: {
     style: function (params) {
-      return "background-color: "+ this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: 24px;";
+      return "background-color: " + this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: 24px;";
     }
   },
   direction: {
@@ -73,13 +73,13 @@ var getStop = function (stopid) {
             return 1;
           if (a.timeleft === b.timeleft)
             return 0;
-        }   
+        }
       }
     });
 
     sortedData.forEach(function (e, i, a) {
       if (i % 2 === 0) {
-        e.darefter = a[i+1].timeleft;
+        e.darefter = a[i + 1].timeleft;
       }
     });
     var finalData = sortedData.filter(function (e) {
