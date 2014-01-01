@@ -1,174 +1,183 @@
 {
 "LocationList":{
   "noNamespaceSchemaLocation":"http://api.vasttrafik.se/v1/hafasRestLocation.xsd",
-  "servertime":"15:22",
-  "serverdate":"2013-11-09",
+  "servertime":"20:04",
+  "serverdate":"2013-12-08",
   "StopLocation":[{
-    "name":"Amalia Jönssons Gata, Göteborg",
-    "id":"9022014002510002",
-    "lat":"57.655103",
-    "lon":"11.939409",
+    "name":"Domkyrkan, Göteborg",
+    "id":"9022014002130002",
+    "lat":"57.704122",
+    "lon":"11.963761",
     "track":"B"
     },{
-    "name":"Sändaregatan, Göteborg",
-    "id":"9022014006560001",
-    "lat":"57.653153",
-    "lon":"11.931984",
+    "name":"Domkyrkan, Göteborg",
+    "id":"9021014002130000",
+    "lat":"57.704292",
+    "lon":"11.963689"
+    },{
+    "name":"Grönsakstorget, Göteborg",
+    "id":"9022014002850001",
+    "lat":"57.702521",
+    "lon":"11.964885",
     "track":"A"
     },{
-    "name":"Sändaregatan, Göteborg",
-    "id":"9021014006560000",
-    "lat":"57.653090",
-    "lon":"11.931912"
+    "name":"Domkyrkan, Göteborg",
+    "id":"9022014002130001",
+    "lat":"57.704463",
+    "lon":"11.963635",
+    "track":"A"
     },{
-    "name":"Sändaregatan, Göteborg",
-    "id":"9022014006560002",
-    "lat":"57.653036",
-    "lon":"11.931831",
+    "name":"Grönsakstorget, Göteborg",
+    "id":"9021014002850000",
+    "lat":"57.702486",
+    "lon":"11.964435"
+    },{
+    "name":"Grönsakstorget, Göteborg",
+    "id":"9022014002850002",
+    "lat":"57.702252",
+    "lon":"11.965163",
     "track":"B"
     },{
-    "name":"Amalia Jönssons Gata, Göteborg",
-    "id":"9021014002510000",
-    "lat":"57.655373",
-    "lon":"11.939643"
+    "name":"Grönsakstorget, Göteborg",
+    "id":"9022014002850003",
+    "lat":"57.702629",
+    "lon":"11.964103",
+    "track":"C"
     },{
-    "name":"F O Peterssons Gata, Göteborg",
-    "id":"9022014002550001",
-    "lat":"57.651175",
-    "lon":"11.939553",
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090001",
+    "lat":"57.704193",
+    "lon":"11.969559",
     "track":"A"
     },{
-    "name":"F O Peterssons Gata, Göteborg",
-    "id":"9021014002550000",
-    "lat":"57.651130",
-    "lon":"11.939526"
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9021014004090000",
+    "lat":"57.704014",
+    "lon":"11.969730"
     },{
-    "name":"F O Peterssons Gata, Göteborg",
-    "id":"9022014002550002",
-    "lat":"57.651094",
-    "lon":"11.939517",
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090003",
+    "lat":"57.704220",
+    "lon":"11.969676",
+    "track":"C"
+    },{
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090004",
+    "lat":"57.703825",
+    "lon":"11.969784",
+    "track":"D"
+    },{
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090002",
+    "lat":"57.703861",
+    "lon":"11.969928",
     "track":"B"
     },{
-    "name":"Amalia Jönssons Gata, Göteborg",
-    "id":"9022014002510001",
-    "lat":"57.655652",
-    "lon":"11.939904",
-    "track":"A"
+    "name":"Grönsakstorget, Göteborg",
+    "id":"9022014002850004",
+    "lat":"57.702539",
+    "lon":"11.963608",
+    "track":"D"
     },{
-    "name":"Radiotorget, Göteborg",
-    "id":"9022014005410002",
-    "lat":"57.657261",
-    "lon":"11.933009",
-    "track":"B"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760008",
+    "lat":"57.706297",
+    "lon":"11.966916",
+    "track":"H"
     },{
-    "name":"Radiotorget, Göteborg",
-    "id":"9021014005410000",
-    "lat":"57.657306",
-    "lon":"11.933090"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760011",
+    "lat":"57.706782",
+    "lon":"11.966548",
+    "track":"K"
     },{
-    "name":"Radiotorget, Göteborg",
-    "id":"9022014005410001",
-    "lat":"57.657360",
-    "lon":"11.933162",
-    "track":"A"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760010",
+    "lat":"57.706800",
+    "lon":"11.967132",
+    "track":"J"
     },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421005",
-    "lat":"57.648937",
-    "lon":"11.934780",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760005",
+    "lat":"57.706576",
+    "lon":"11.968786",
     "track":"E"
     },{
-    "name":"Radiovägen, Göteborg",
-    "id":"9022014005420004",
-    "lat":"57.650276",
-    "lon":"11.930267",
-    "track":"D"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760012",
+    "lat":"57.706854",
+    "lon":"11.967096",
+    "track":"L"
     },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421004",
-    "lat":"57.648784",
-    "lon":"11.935031",
-    "track":"D"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9021014001760000",
+    "lat":"57.706944",
+    "lon":"11.967824"
     },{
-    "name":"Radiovägen, Göteborg",
-    "id":"9022014005420003",
-    "lat":"57.650051",
-    "lon":"11.930402",
-    "track":"C"
-    },{
-    "name":"Lona Knapes Gata, Göteborg",
-    "id":"9022014004535002",
-    "lat":"57.649485",
-    "lon":"11.941710",
-    "track":"B"
-    },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421001",
-    "lat":"57.648946",
-    "lon":"11.933377",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760001",
+    "lat":"57.707034",
+    "lon":"11.967851",
     "track":"A"
     },{
-    "name":"Lona Knapes Gata, Göteborg",
-    "id":"9021014004535000",
-    "lat":"57.649593",
-    "lon":"11.942070"
-    },{
-    "name":"Lona Knapes Gata, Göteborg",
-    "id":"9022014004535001",
-    "lat":"57.649701",
-    "lon":"11.942448",
-    "track":"A"
-    },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9021014005421000",
-    "lat":"57.648703",
-    "lon":"11.934070"
-    },{
-    "name":"Beatrice Lesslies Gata, Göteborg",
-    "id":"9022014002500002",
-    "lat":"57.657980",
-    "lon":"11.939670",
-    "track":"B"
-    },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421003",
-    "lat":"57.648514",
-    "lon":"11.933791",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760003",
+    "lat":"57.707052",
+    "lon":"11.968453",
     "track":"C"
     },{
-    "name":"Radiovägen, Göteborg",
-    "id":"9021014005420000",
-    "lat":"57.649935",
-    "lon":"11.929611"
-    },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421006",
-    "lat":"57.648343",
-    "lon":"11.934061",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760006",
+    "lat":"57.706710",
+    "lon":"11.969784",
     "track":"F"
     },{
-    "name":"Radiomotet, Göteborg",
-    "id":"9022014005421002",
-    "lat":"57.648478",
-    "lon":"11.933270",
+    "name":"Heden, Göteborg",
+    "id":"9022014003127007",
+    "lat":"57.702638",
+    "lon":"11.972481",
+    "track":"G"
+    },{
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760002",
+    "lat":"57.707466",
+    "lon":"11.967671",
     "track":"B"
     },{
-    "name":"Beatrice Lesslies Gata, Göteborg",
-    "id":"9021014002500000",
-    "lat":"57.658250",
-    "lon":"11.939679"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760004",
+    "lat":"57.707178",
+    "lon":"11.969478",
+    "track":"D"
     },{
-    "name":"Frölunda Smedja, Göteborg",
-    "id":"9022014002525002",
-    "lat":"57.648092",
-    "lon":"11.939193",
+    "name":"Skeppsbron, Göteborg",
+    "id":"9022014005840002",
+    "lat":"57.706441",
+    "lon":"11.960777",
     "track":"B"
     },{
-    "name":"Radiovägen, Göteborg",
-    "id":"9022014005420001",
-    "lat":"57.649800",
-    "lon":"11.928892",
+    "name":"Skeppsbron, Göteborg",
+    "id":"9021014005840000",
+    "lat":"57.706117",
+    "lon":"11.959446"
+    },{
+    "name":"Heden, Göteborg",
+    "id":"9022014003127001",
+    "lat":"57.702351",
+    "lon":"11.974170",
     "track":"A"
+    },{
+    "name":"Heden, Göteborg",
+    "id":"9022014003127002",
+    "lat":"57.702171",
+    "lon":"11.974269",
+    "track":"B"
+    },{
+    "name":"Vasaplatsen, Göteborg",
+    "id":"9022014007300003",
+    "lat":"57.699546",
+    "lon":"11.969244",
+    "track":"C"
     }]
   }
 }
