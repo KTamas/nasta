@@ -6,20 +6,23 @@
 var apikey = "1b71620f-a0f1-4448-afe9-069e40b1ef51";
 var baseurl = "http://api.vasttrafik.se/bin/rest.exe/v1/";
 
-var parseDateTime = function (dd, tt) {
-  var d = dd.split('-'), t = tt.split(':');
+var parseDateTime = function (date, time) {
+  // "serverdate":"2013-11-10",
+  // "servertime":"16:48",
+  var d = date.split('-'), t = time.split(':');
   return new Date(d[0], d[1], d[2], t[0], t[1]);
 };
 
+// server datetime
 var base;
 
 var timeDiff = function (p) {
-  var date, time, dt, to_return;
+  var date, time, datetime;
+  // use the realtime data, otherwise fall back to the timetable
   date = p.rtDate === undefined ? p.date : p.rtDate;
   time = p.rtTime === undefined ? p.time : p.rtTime;
-  dt = parseDateTime(date, time);
-  to_return = (dt - base) / 1000 / 60;
-  return to_return;
+  datetime = parseDateTime(date, time);
+  return (datetime - base) / 1000 / 60;
 };
 
 var boardDirectives = {
@@ -43,45 +46,6 @@ var stopDirectives = {
   }
 };
 
-var gotLocation = function (pos) {
-  //$.ajax({
-    //url: baseurl + "location.nearbystops?jsonpCallback=?",
-    //data: {
-      //"authKey": apikey,
-      //"format": "json",
-      //"originCoordLat": pos.coords.latitude,
-      //"originCoordLong": pos.coords.longitude,
-      //"maxNo": 50
-    //},
-    //dataType: "jsonp",
-    //cache: false
-  //}).done(function (data) {
-  $.ajax({
-    url: "http://ktamas.com/nearby.json",
-    dataType: "json",
-    cache: false
-  }).done(function (data) {
-    // get only the stations, not the individual lanes (tracks)
-    var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
-    Transparency.render(document.getElementById("stops"), filteredStops, stopDirectives);
-    $(".dropdown-menu li a").click(function () {
-      $(".btn").text($(this).text());
-      $(".btn").data("stopid", $(this).data("stopid"));
-      getStop($(this).data("stopid"));
-    });
-
-    $(".btn").text(filteredStops[0].name);
-    $(".btn").data("stopid", filteredStops[0].id);
-
-    getStop(filteredStops[0].id);
-  });
-};
-
-var gotError = function (error) {
-  window.alert("Got error: " + error.code + " - " + error.message);
-};
-
-
 var getStop = function (stopid) {
   $.ajax({
     url: baseurl + "departureBoard?jsonpCallback=?",
@@ -95,18 +59,16 @@ var getStop = function (stopid) {
     dataType: "jsonp",
     cache: false
   }).done(function (data) {
-    var t, d, sortedData, lines, groupedLines;
-    t = data.DepartureBoard.servertime;
-    d = data.DepartureBoard.serverdate;
-    base = parseDateTime(d, t);
+    var t, d, sortedData, board;
+    base = parseDateTime(data.DepartureBoard.serverdate, data.DepartureBoard.servertime);
 
     // a board is an array of departures
-    var board = [];
+    board = [];
 
-    // a board has x departures, with the following structure
-    // { line, towards, next, därefter }
+    // a board has n departures, with the following structure
+    // { sname, direction, next, därefter, track }
     //
-    // for the input we have the following structure (test/board.json)
+    // the input is (test/board.json)
     // - the current time (base)
     // - an array of departures, with all the info
     //
@@ -115,7 +77,6 @@ var getStop = function (stopid) {
     //
     // We sort it after working our way through the array.
 
-    lines = {};
     data.DepartureBoard.Departure.forEach(function (dep, i) {
       // me: why yes this is a horrible abuse of the awful javascript type system
       // gazs: what type system?
@@ -127,35 +88,68 @@ var getStop = function (stopid) {
       }
     });
 
-    //board.sort(function (a, b) {
-      //return parseFloat(a.sname) - (b.sname);
-    //}).sort(function (a, b) {
-      //return a.track > b.track;
-    //});
-    
     board.sort(function (a, b) {
       if (parseFloat(a.sname) < parseFloat(b.sname))
         return -1;
       if (parseFloat(a.sname) > parseFloat(b.sname))
         return 1;
-      if (a.sname === b.sname) {
-        if (a.track < b.track)
-          return -1;
-        if (a.track > b.track)
-          return 1;
-        if (a.track === b.track) {
-          if (parseFloat(a.timeleft) < parseFloat(b.timeleft))
-            return -1;
-          if (parseFloat(a.timeleft) > parseFloat(b.timeleft))
-            return 1;
-          if (a.timeleft === b.timeleft)
-            return 0;
-        }
-      }
+      if (a.track < b.track)
+        return -1;
+      if (a.track > b.track)
+        return 1;
+      if (parseFloat(a.timeleft) < parseFloat(b.timeleft))
+        return -1;
+      if (parseFloat(a.timeleft) > parseFloat(b.timeleft))
+        return 1;
     });
+    
     console.log(board);
     //Transparency.render(document.getElementById("departure"), finalData, boardDirectives);
   });
+};
+
+var cbGetStop = function (data) {
+  // get only the stations, not the individual lanes (tracks)
+  var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
+  Transparency.render(document.getElementById("stops"), filteredStops, stopDirectives);
+  $(".dropdown-menu li a").click(function () {
+    $(".btn").text($(this).text());
+    $(".btn").data("stopid", $(this).data("stopid"));
+    getStop($(this).data("stopid"));
+  });
+
+  $(".btn").text(filteredStops[0].name);
+  $(".btn").data("stopid", filteredStops[0].id);
+
+  getStop(filteredStops[0].id);
+};
+
+var mock = false;
+var gotLocation = function (pos) {
+  if (mock) {
+    $.ajax({
+      url: "http://ktamas.com/nearby.json",
+      dataType: "json",
+      cache: false
+    }).done(cbGetStop);
+  } else {
+    $.ajax({
+      url: baseurl + "location.nearbystops?jsonpCallback=?",
+      data: {
+        "authKey": apikey,
+        "format": "json",
+        "originCoordLat": pos.coords.latitude,
+        "originCoordLong": pos.coords.longitude,
+        "maxNo": 50
+      },
+      dataType: "jsonp",
+      cache: false
+    }).done(cbGetStop);
+  }
+};
+
+var gotError = function (error) {
+  window.alert("Got error: " + error.code + " - " + error.message);
 };
 
 $(document).ready(function () {
