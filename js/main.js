@@ -82,7 +82,7 @@ var getStop = function (stopid) {
       // gazs: what type system?
       var pos = board.map(function (e) { return e.sname + e.direction; }).indexOf(dep.sname + dep.direction);
       if (pos < 0) {
-        board.push({ sname: dep.sname, direction: dep.direction, next: timeDiff(dep), darefter: null, track: dep.track });
+        board.push({ sname: dep.sname, direction: dep.direction, next: timeDiff(dep), darefter: null, track: dep.track, fgColor: dep.fgColor, bgColor: dep.bgColor });
       } else {
         board[pos].darefter = timeDiff(dep);
       }
@@ -104,7 +104,7 @@ var getStop = function (stopid) {
     });
     
     console.log(board);
-    //Transparency.render(document.getElementById("departure"), finalData, boardDirectives);
+    Transparency.render(document.getElementById("departure"), board, boardDirectives);
   });
 };
 
