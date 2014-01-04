@@ -33,7 +33,19 @@ var boardDirectives = {
   },
   direction: {
     html: function () {
-      return this.direction.replace("via", "<br /><small>via") + "</small>";
+      if (this.direction.indexOf("via") > -1) {
+        return this.direction.replace("via", "<br /><small>via") + "</small>";
+      } else {
+        return this.direction;
+      }
+    },
+
+    style: function () {
+      if (this.direction.indexOf("via") > -1) {
+        return "line-height: 0.8; font-weight: bold; padding-left: 5px;";
+      } else {
+        return "height: 34px; line-height: 34px; font-weight: bold; padding-left: 5px;";
+      }
     }
   }
 };
