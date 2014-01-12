@@ -42,9 +42,9 @@ var boardDirectives = {
 
     style: function () {
       if (this.direction.indexOf("via") > -1) {
-        return "line-height: 0.8; font-weight: bold; padding-left: 5px;";
+        return "line-height: 0.8; font-weight: bold; padding-left: 5px; overflow: hidden;";
       } else {
-        return "height: 34px; line-height: 34px; font-weight: bold; padding-left: 5px;";
+        return "height: 34px; line-height: 34px; font-weight: bold; padding-left: 5px; overflow: hidden;";
       }
     }
   }
