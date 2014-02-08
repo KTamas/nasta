@@ -28,7 +28,7 @@ var timeDiff = function (p) {
 var boardDirectives = {
   sname: {
     style: function (params) {
-      return "background-color: " + this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: 24px;";
+      return "background-color: " + this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: " + this.sname.length < 4 ? "24px;" : "18px";
     }
   },
   direction: {
@@ -65,7 +65,7 @@ var getStop = function (stopid) {
       "authKey": apikey,
       "format": "json",
       "id": stopid,
-      "timeSpan": 120,
+      "timeSpan": 60,
       "maxDeparturesPerLine": 2
     },
     dataType: "jsonp",
@@ -101,6 +101,7 @@ var getStop = function (stopid) {
     });
 
     board.sort(function (a, b) {
+      //nested sorting without the actual nesting. woohoo!
       if (parseFloat(a.sname) < parseFloat(b.sname))
         return -1;
       if (parseFloat(a.sname) > parseFloat(b.sname))
