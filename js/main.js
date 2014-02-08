@@ -153,7 +153,8 @@ var gotLocation = function (pos) {
         "format": "json",
         "originCoordLat": pos.coords.latitude,
         "originCoordLong": pos.coords.longitude,
-        "maxNo": 50
+        "maxNo": 50,
+        "maxDist": 3000
       },
       dataType: "jsonp",
       cache: false
