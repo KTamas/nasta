@@ -116,8 +116,8 @@ var getStop = function (stopid) {
         return 1;
     });
     
-    console.log(board);
     Transparency.render(document.getElementById("departure"), board, boardDirectives);
+
   });
 };
 
@@ -126,13 +126,13 @@ var cbGetStop = function (data) {
   var filteredStops = data.LocationList.StopLocation.filter(function (item) { return item.track === undefined; });
   Transparency.render(document.getElementById("stops"), filteredStops, stopDirectives);
   $(".dropdown-menu li a").click(function () {
-    $(".btn").text($(this).text());
-    $(".btn").data("stopid", $(this).data("stopid"));
+    $(".btn:first").text($(this).text());
+    $(".btn:first").data("stopid", $(this).data("stopid"));
     getStop($(this).data("stopid"));
   });
 
-  $(".btn").text(filteredStops[0].name);
-  $(".btn").data("stopid", filteredStops[0].id);
+  $(".btn:first").text(filteredStops[0].name);
+  $(".btn:first").data("stopid", filteredStops[0].id);
 
   getStop(filteredStops[0].id);
 };
@@ -167,4 +167,7 @@ var gotError = function (error) {
 
 $(document).ready(function () {
   navigator.geolocation.getCurrentPosition(gotLocation, gotError);
+  $(".btn:last").click(function () {
+    getStop($(".btn:first").data("stopid"));
+  });
 });
