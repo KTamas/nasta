@@ -28,7 +28,7 @@ var timeDiff = function (p) {
 var boardDirectives = {
   sname: {
     style: function (params) {
-      return "background-color: " + this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: " + this.sname.length < 4 ? "24px;" : "18px;";
+      return "background-color: " + this.fgColor + "; color: " + this.bgColor + "; font-weight: bold; padding-left: 5px; padding-right: 5px; font-size: " + (this.sname.length < 4 ? "24px;" : "18px;");
     }
   },
   direction: {
