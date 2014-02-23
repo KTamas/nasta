@@ -102,10 +102,23 @@ var getStop = function (stopid) {
 
     board.sort(function (a, b) {
       //nested sorting without the actual nesting. woohoo!
-      if (parseFloat(a.sname) < parseFloat(b.sname))
+      var na = parseFloat(a.sname), nb = parseFloat(b.sname);
+      if (!isNaN(na) && isNaN(nb))
         return -1;
-      if (parseFloat(a.sname) > parseFloat(b.sname))
+      if (isNaN(na) && !isNaN(nb))
         return 1;
+      if (isNaN(na) && isNaN(nb)) {
+        if (a.sname < b.sname)
+          return -1;
+        if (a.sname > b.sname)
+          return 1;
+      } else {
+        if (na < nb)
+          return -1;
+        if (na > nb)
+          return 1;
+      }
+
       if (a.track < b.track)
         return -1;
       if (a.track > b.track)

@@ -1,107 +1,19 @@
 {
 "LocationList":{
   "noNamespaceSchemaLocation":"http://api.vasttrafik.se/v1/hafasRestLocation.xsd",
-  "servertime":"20:04",
-  "serverdate":"2013-12-08",
+  "servertime":"07:06",
+  "serverdate":"2014-02-23",
   "StopLocation":[{
-    "name":"Domkyrkan, Göteborg",
-    "id":"9022014002130002",
-    "lat":"57.704122",
-    "lon":"11.963761",
-    "track":"B"
-    },{
-    "name":"Domkyrkan, Göteborg",
-    "id":"9021014002130000",
-    "lat":"57.704292",
-    "lon":"11.963689"
-    },{
-    "name":"Grönsakstorget, Göteborg",
-    "id":"9022014002850001",
-    "lat":"57.702521",
-    "lon":"11.964885",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760001",
+    "lat":"57.707034",
+    "lon":"11.967851",
     "track":"A"
     },{
-    "name":"Domkyrkan, Göteborg",
-    "id":"9022014002130001",
-    "lat":"57.704463",
-    "lon":"11.963635",
-    "track":"A"
-    },{
-    "name":"Grönsakstorget, Göteborg",
-    "id":"9021014002850000",
-    "lat":"57.702486",
-    "lon":"11.964435"
-    },{
-    "name":"Grönsakstorget, Göteborg",
-    "id":"9022014002850002",
-    "lat":"57.702252",
-    "lon":"11.965163",
-    "track":"B"
-    },{
-    "name":"Grönsakstorget, Göteborg",
-    "id":"9022014002850003",
-    "lat":"57.702629",
-    "lon":"11.964103",
-    "track":"C"
-    },{
-    "name":"Kungsportsplatsen, Göteborg",
-    "id":"9022014004090001",
-    "lat":"57.704193",
-    "lon":"11.969559",
-    "track":"A"
-    },{
-    "name":"Kungsportsplatsen, Göteborg",
-    "id":"9021014004090000",
-    "lat":"57.704014",
-    "lon":"11.969730"
-    },{
-    "name":"Kungsportsplatsen, Göteborg",
-    "id":"9022014004090003",
-    "lat":"57.704220",
-    "lon":"11.969676",
-    "track":"C"
-    },{
-    "name":"Kungsportsplatsen, Göteborg",
-    "id":"9022014004090004",
-    "lat":"57.703825",
-    "lon":"11.969784",
-    "track":"D"
-    },{
-    "name":"Kungsportsplatsen, Göteborg",
-    "id":"9022014004090002",
-    "lat":"57.703861",
-    "lon":"11.969928",
-    "track":"B"
-    },{
-    "name":"Grönsakstorget, Göteborg",
-    "id":"9022014002850004",
-    "lat":"57.702539",
-    "lon":"11.963608",
-    "track":"D"
-    },{
     "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760008",
-    "lat":"57.706297",
-    "lon":"11.966916",
-    "track":"H"
-    },{
-    "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760011",
-    "lat":"57.706782",
-    "lon":"11.966548",
-    "track":"K"
-    },{
-    "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760010",
-    "lat":"57.706800",
-    "lon":"11.967132",
-    "track":"J"
-    },{
-    "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760005",
-    "lat":"57.706576",
-    "lon":"11.968786",
-    "track":"E"
+    "id":"9021014001760000",
+    "lat":"57.706944",
+    "lon":"11.967842"
     },{
     "name":"Brunnsparken, Göteborg",
     "id":"9022014001760012",
@@ -110,15 +22,16 @@
     "track":"L"
     },{
     "name":"Brunnsparken, Göteborg",
-    "id":"9021014001760000",
-    "lat":"57.706944",
-    "lon":"11.967824"
+    "id":"9022014001760002",
+    "lat":"57.707466",
+    "lon":"11.967671",
+    "track":"B"
     },{
     "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760001",
-    "lat":"57.707034",
-    "lon":"11.967851",
-    "track":"A"
+    "id":"9022014001760010",
+    "lat":"57.706800",
+    "lon":"11.967132",
+    "track":"J"
     },{
     "name":"Brunnsparken, Göteborg",
     "id":"9022014001760003",
@@ -127,22 +40,40 @@
     "track":"C"
     },{
     "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760006",
-    "lat":"57.706710",
-    "lon":"11.969784",
-    "track":"F"
+    "id":"9022014001760013",
+    "lat":"57.707672",
+    "lon":"11.967393",
+    "track":"M"
     },{
-    "name":"Heden, Göteborg",
-    "id":"9022014003127007",
-    "lat":"57.702638",
-    "lon":"11.972481",
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760011",
+    "lat":"57.706782",
+    "lon":"11.966548",
+    "track":"K"
+    },{
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760005",
+    "lat":"57.706576",
+    "lon":"11.968786",
+    "track":"E"
+    },{
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760014",
+    "lat":"57.707888",
+    "lon":"11.967644",
+    "track":"N"
+    },{
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760007",
+    "lat":"57.706279",
+    "lon":"11.967042",
     "track":"G"
     },{
     "name":"Brunnsparken, Göteborg",
-    "id":"9022014001760002",
-    "lat":"57.707466",
-    "lon":"11.967671",
-    "track":"B"
+    "id":"9022014001760008",
+    "lat":"57.706297",
+    "lon":"11.966916",
+    "track":"H"
     },{
     "name":"Brunnsparken, Göteborg",
     "id":"9022014001760004",
@@ -150,34 +81,105 @@
     "lon":"11.969478",
     "track":"D"
     },{
-    "name":"Skeppsbron, Göteborg",
-    "id":"9022014005840002",
-    "lat":"57.706441",
-    "lon":"11.960777",
-    "track":"B"
+    "name":"Brunnsparken, Göteborg",
+    "id":"9022014001760006",
+    "lat":"57.706710",
+    "lon":"11.969784",
+    "track":"F"
     },{
-    "name":"Skeppsbron, Göteborg",
-    "id":"9021014005840000",
-    "lat":"57.706117",
-    "lon":"11.959446"
-    },{
-    "name":"Heden, Göteborg",
-    "id":"9022014003127001",
-    "lat":"57.702351",
-    "lon":"11.974170",
+    "name":"Lilla Bommen, Göteborg",
+    "id":"9022014004380001",
+    "lat":"57.708985",
+    "lon":"11.966817",
     "track":"A"
     },{
-    "name":"Heden, Göteborg",
-    "id":"9022014003127002",
-    "lat":"57.702171",
-    "lon":"11.974269",
+    "name":"Nordstan, Göteborg",
+    "id":"9022014004945005",
+    "lat":"57.708266",
+    "lon":"11.971375",
+    "track":"E"
+    },{
+    "name":"Lilla Bommen, Göteborg",
+    "id":"9022014004380002",
+    "lat":"57.709362",
+    "lon":"11.966691",
     "track":"B"
     },{
-    "name":"Vasaplatsen, Göteborg",
-    "id":"9022014007300003",
-    "lat":"57.699546",
-    "lon":"11.969244",
+    "name":"Nordstan, Göteborg",
+    "id":"9022014004945001",
+    "lat":"57.708868",
+    "lon":"11.971096",
+    "track":"A"
+    },{
+    "name":"Lilla Bommen, Göteborg",
+    "id":"9021014004380000",
+    "lat":"57.709551",
+    "lon":"11.966035"
+    },{
+    "name":"Nordstan, Göteborg",
+    "id":"9021014004945000",
+    "lat":"57.709245",
+    "lon":"11.970791"
+    },{
+    "name":"Nordstan, Göteborg",
+    "id":"9022014004945003",
+    "lat":"57.709407",
+    "lon":"11.970449",
     "track":"C"
+    },{
+    "name":"Nordstan, Göteborg",
+    "id":"9022014004945002",
+    "lat":"57.709335",
+    "lon":"11.970728",
+    "track":"B"
+    },{
+    "name":"Nordstan, Göteborg",
+    "id":"9022014004945004",
+    "lat":"57.709371",
+    "lon":"11.970889",
+    "track":"D"
+    },{
+    "name":"Centralstationen, Göteborg",
+    "id":"9022014001950005",
+    "lat":"57.707816",
+    "lon":"11.972957",
+    "track":"E"
+    },{
+    "name":"Nils Ericson Terminalen, Göteborg",
+    "id":"9022014004940018",
+    "lat":"57.709317",
+    "lon":"11.971213",
+    "track":"18"
+    },{
+    "name":"Centralstationen, Göteborg",
+    "id":"9022014001950003",
+    "lat":"57.707645",
+    "lon":"11.973074",
+    "track":"C"
+    },{
+    "name":"Centralstationen, Göteborg",
+    "id":"9022014001950004",
+    "lat":"57.707708",
+    "lon":"11.973200",
+    "track":"D"
+    },{
+    "name":"Lilla Bommen, Göteborg",
+    "id":"9022014004380003",
+    "lat":"57.709911",
+    "lon":"11.965559",
+    "track":"C"
+    },{
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090003",
+    "lat":"57.704220",
+    "lon":"11.969676",
+    "track":"C"
+    },{
+    "name":"Kungsportsplatsen, Göteborg",
+    "id":"9022014004090001",
+    "lat":"57.704193",
+    "lon":"11.969559",
+    "track":"A"
     }]
   }
 }
