@@ -4,7 +4,7 @@
 "use strict";
 
 var apikey = "1b71620f-a0f1-4448-afe9-069e40b1ef51";
-var baseurl = "http://api.vasttrafik.se/bin/rest.exe/v1/";
+var baseurl = "https://api.vasttrafik.se/bin/rest.exe/v1/";
 
 var parseDateTime = function (date, time) {
   // "serverdate":"2013-11-10",
